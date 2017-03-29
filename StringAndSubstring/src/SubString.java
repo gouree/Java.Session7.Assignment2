@@ -1,4 +1,5 @@
 import java.util.*;
+
 /*
  * Write a program to find a substring in a String by using an 
  * inbuilt method of String class.
@@ -15,24 +16,23 @@ public class SubString {
 
 class Sub
 {
-	String s,sub1,sub2,sub3;
+	String s="hello i am gouree",sub1,sub2,sub3,ss;
 	Scanner input= new Scanner(System.in);
 	
 	
-	//method to get string and find its substring
+	//method to trim string and find its substring
 	void getString()
 	{
 		
 		//try catch block to handle String Exception
 		try
 		{
-			System.out.println("Enter a string --->");
-			s= input.next();
-			sub1= s.substring(2,4);  // create a substring using inbuilt function
-			sub2=s.substring(3);	// create a substring using inbuilt function
+			ss=s.trim();
+			sub1= ss.substring(2,4);  // create a substring using inbuilt function
+			sub2=ss.substring(3);	// create a substring using inbuilt function
 			sub3="am";
 			
-			if (s.contains(sub3)) // check whether substring sub3 exists in string s
+			if (ss.contains(sub3)) // check whether substring sub3 exists in string s
 			{
 				System.out.println("substring " +sub3+"  exists in string "+s);
 			}
