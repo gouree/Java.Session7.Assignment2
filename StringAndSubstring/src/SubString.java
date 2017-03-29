@@ -15,7 +15,7 @@ public class SubString {
 
 class Sub
 {
-	String s,sub1,sub2;
+	String s,sub1,sub2,sub3;
 	Scanner input= new Scanner(System.in);
 	
 	
@@ -28,8 +28,18 @@ class Sub
 		{
 			System.out.println("Enter a string --->");
 			s= input.next();
-			sub1= s.substring(2,4);
-			sub2=s.substring(3);
+			sub1= s.substring(2,4);  // create a substring using inbuilt function
+			sub2=s.substring(3);	// create a substring using inbuilt function
+			sub3="am";
+			
+			if (s.contains(sub3)) // check whether substring sub3 exists in string s
+			{
+				System.out.println("substring " +sub3+"  exists in string "+s);
+			}
+			else
+			{
+				System.out.println("substring " +sub3+"  does not exists in string "+s);
+			}
 		}
 		
 		catch(StringIndexOutOfBoundsException e)
